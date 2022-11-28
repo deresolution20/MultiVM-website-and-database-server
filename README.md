@@ -26,12 +26,13 @@ Project consists of a utilizing Vagrant to provision to automate the setup of tw
 <p align="left">
 - edited the Vagrant file to add the configuration setup steps for both servers to the provisioning sections <br/>
 
+![multivm](https://user-images.githubusercontent.com/85902399/204404016-17c95c34-ce1d-4dbd-9066-fe76c78cf10d.jpg)
 
 
 
 <br />
 <br />
-once completed, run the code using vagrant up
+once completed, verify the servers are running.  see log file.
 
 
 <br />
