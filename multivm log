@@ -1,0 +1,401 @@
+[brice@DESKTOP-VOL9M2F MultiVM]$ vagrant up
+Bringing machine 'webO1' up with 'virtualbox' provider...
+Bringing machine 'dbO1' up with 'virtualbox' provider...
+==> webO1: Importing base box 'ubuntu/bionic64'...
+==> webO1: Matching MAC address for NAT networking...
+==> webO1: Checking if box 'ubuntu/bionic64' version '20221125.0.0' is up to date...
+==> webO1: Setting the name of the VM: MultiVM_webO1_1669677632748_21344
+==> webO1: Fixed port collision for 22 => 2222. Now on port 2200.
+==> webO1: Clearing any previously set network interfaces...
+==> webO1: Preparing network interfaces based on configuration...
+    webO1: Adapter 1: nat
+    webO1: Adapter 2: hostonly
+==> webO1: Forwarding ports...
+    webO1: 22 (guest) => 2200 (host) (adapter 1)
+==> webO1: Running 'pre-boot' VM customizations...
+==> webO1: Booting VM...
+==> webO1: Waiting for machine to boot. This may take a few minutes...
+    webO1: SSH address: 127.0.0.1:2200
+    webO1: SSH username: vagrant
+    webO1: SSH auth method: private key
+    webO1: Warning: Connection reset. Retrying...
+    webO1: Warning: Remote connection disconnect. Retrying...
+    webO1: 
+    webO1: Vagrant insecure key detected. Vagrant will automatically replace
+    webO1: this with a newly generated keypair for better security.
+    webO1: 
+    webO1: Inserting generated public key within guest...
+    webO1: Removing insecure key from the guest if it's present...
+    webO1: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> webO1: Machine booted and ready!
+==> webO1: Checking for guest additions in VM...
+    webO1: The guest additions on this VM do not match the installed version of
+    webO1: VirtualBox! In most cases this is fine, but in rare cases it can
+    webO1: prevent things such as shared folders from working properly. If you see
+    webO1: shared folder errors, please make sure the guest additions within the
+    webO1: virtual machine match the version of VirtualBox you have installed on
+    webO1: your host and reload your VM.
+    webO1: 
+    webO1: Guest Additions Version: 5.2.42
+    webO1: VirtualBox Version: 7.0
+==> webO1: Configuring and enabling network interfaces...
+==> webO1: Mounting shared folders...
+    webO1: /vagrant => /home/brice/Documents/DevOps-training/MultiVM
+==> webO1: Running provisioner: shell...
+    webO1: Running: inline script
+    webO1: 
+    webO1: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    webO1: 
+    webO1: Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+    webO1: Hit:2 http://archive.ubuntu.com/ubuntu bionic InRelease
+    webO1: Get:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+    webO1: Get:4 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [2473 kB]
+    webO1: Get:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [83.3 kB]
+    webO1: Get:6 http://security.ubuntu.com/ubuntu bionic-security/main Translation-en [428 kB]
+    webO1: Get:7 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [985 kB]
+    webO1: Get:8 http://security.ubuntu.com/ubuntu bionic-security/restricted Translation-en [136 kB]
+    webO1: Get:9 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [1246 kB]
+    webO1: Get:10 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [8570 kB]
+    webO1: Get:11 http://security.ubuntu.com/ubuntu bionic-security/universe Translation-en [288 kB]
+    webO1: Get:12 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [19.0 kB]
+    webO1: Get:13 http://security.ubuntu.com/ubuntu bionic-security/multiverse Translation-en [3836 B]
+    webO1: Get:14 http://archive.ubuntu.com/ubuntu bionic/universe Translation-en [4941 kB]
+    webO1: Get:15 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [151 kB]
+    webO1: Get:16 http://archive.ubuntu.com/ubuntu bionic/multiverse Translation-en [108 kB]
+    webO1: Get:17 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [2810 kB]
+    webO1: Get:18 http://archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [517 kB]
+    webO1: Get:19 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1858 kB]
+    webO1: Get:20 http://archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [402 kB]
+    webO1: Get:21 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [24.9 kB]
+    webO1: Get:22 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse Translation-en [6012 B]
+    webO1: Get:23 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [53.3 kB]
+    webO1: Get:24 http://archive.ubuntu.com/ubuntu bionic-backports/main Translation-en [14.6 kB]
+    webO1: Get:25 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [18.1 kB]
+    webO1: Get:26 http://archive.ubuntu.com/ubuntu bionic-backports/universe Translation-en [8668 B]
+    webO1: Fetched 25.3 MB in 8s (3057 kB/s)
+    webO1: Reading package lists...
+    webO1: Building dependency tree...
+    webO1: Reading state information...
+    webO1: 3 packages can be upgraded. Run 'apt list --upgradable' to see them.
+    webO1: 
+    webO1: WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+    webO1: 
+    webO1: Reading package lists...
+    webO1: Building dependency tree...
+    webO1: Reading state information...
+    webO1: wget is already the newest version (1.19.4-1ubuntu2.2).
+    webO1: wget set to manually installed.
+    webO1: The following additional packages will be installed:
+    webO1:   apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+    webO1:   libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.2-0 ssl-cert
+    webO1: Suggested packages:
+    webO1:   www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom
+    webO1:   openssl-blacklist zip
+    webO1: The following NEW packages will be installed:
+    webO1:   apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+    webO1:   libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.2-0 ssl-cert unzip
+    webO1: 0 upgraded, 11 newly installed, 0 to remove and 3 not upgraded.
+    webO1: Need to get 1899 kB of archives.
+    webO1: After this operation, 7564 kB of additional disk space will be used.
+    webO1: Get:1 http://archive.ubuntu.com/ubuntu bionic/main amd64 libapr1 amd64 1.6.3-2 [90.9 kB]
+    webO1: Get:2 http://archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1 amd64 1.6.1-2 [84.4 kB]
+    webO1: Get:3 http://archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-2 [10.6 kB]
+    webO1: Get:4 http://archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-ldap amd64 1.6.1-2 [8764 B]
+    webO1: Get:5 http://archive.ubuntu.com/ubuntu bionic/main amd64 liblua5.2-0 amd64 5.2.4-1.1build1 [108 kB]
+    webO1: Get:6 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-bin amd64 2.4.29-1ubuntu4.25 [1072 kB]
+    webO1: Get:7 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-utils amd64 2.4.29-1ubuntu4.25 [83.8 kB]
+    webO1: Get:8 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-data all 2.4.29-1ubuntu4.25 [160 kB]
+    webO1: Get:9 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2 amd64 2.4.29-1ubuntu4.25 [95.1 kB]
+    webO1: Get:10 http://archive.ubuntu.com/ubuntu bionic/main amd64 ssl-cert all 1.0.39 [17.0 kB]
+    webO1: Get:11 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 unzip amd64 6.0-21ubuntu1.2 [168 kB]
+    webO1: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    webO1: Fetched 1899 kB in 2s (898 kB/s)
+    webO1: Selecting previously unselected package libapr1:amd64.
+(Reading database ... 60200 files and directories currently installed.)
+    webO1: Preparing to unpack .../00-libapr1_1.6.3-2_amd64.deb ...
+    webO1: Unpacking libapr1:amd64 (1.6.3-2) ...
+    webO1: Selecting previously unselected package libaprutil1:amd64.
+    webO1: Preparing to unpack .../01-libaprutil1_1.6.1-2_amd64.deb ...
+    webO1: Unpacking libaprutil1:amd64 (1.6.1-2) ...
+    webO1: Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+    webO1: Preparing to unpack .../02-libaprutil1-dbd-sqlite3_1.6.1-2_amd64.deb ...
+    webO1: Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+    webO1: Selecting previously unselected package libaprutil1-ldap:amd64.
+    webO1: Preparing to unpack .../03-libaprutil1-ldap_1.6.1-2_amd64.deb ...
+    webO1: Unpacking libaprutil1-ldap:amd64 (1.6.1-2) ...
+    webO1: Selecting previously unselected package liblua5.2-0:amd64.
+    webO1: Preparing to unpack .../04-liblua5.2-0_5.2.4-1.1build1_amd64.deb ...
+    webO1: Unpacking liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+    webO1: Selecting previously unselected package apache2-bin.
+    webO1: Preparing to unpack .../05-apache2-bin_2.4.29-1ubuntu4.25_amd64.deb ...
+    webO1: Unpacking apache2-bin (2.4.29-1ubuntu4.25) ...
+    webO1: Selecting previously unselected package apache2-utils.
+    webO1: Preparing to unpack .../06-apache2-utils_2.4.29-1ubuntu4.25_amd64.deb ...
+    webO1: Unpacking apache2-utils (2.4.29-1ubuntu4.25) ...
+    webO1: Selecting previously unselected package apache2-data.
+    webO1: Preparing to unpack .../07-apache2-data_2.4.29-1ubuntu4.25_all.deb ...
+    webO1: Unpacking apache2-data (2.4.29-1ubuntu4.25) ...
+    webO1: Selecting previously unselected package apache2.
+    webO1: Preparing to unpack .../08-apache2_2.4.29-1ubuntu4.25_amd64.deb ...
+    webO1: Unpacking apache2 (2.4.29-1ubuntu4.25) ...
+    webO1: Selecting previously unselected package ssl-cert.
+    webO1: Preparing to unpack .../09-ssl-cert_1.0.39_all.deb ...
+    webO1: Unpacking ssl-cert (1.0.39) ...
+    webO1: Selecting previously unselected package unzip.
+    webO1: Preparing to unpack .../10-unzip_6.0-21ubuntu1.2_amd64.deb ...
+    webO1: Unpacking unzip (6.0-21ubuntu1.2) ...
+    webO1: Setting up libapr1:amd64 (1.6.3-2) ...
+    webO1: Setting up unzip (6.0-21ubuntu1.2) ...
+    webO1: Setting up apache2-data (2.4.29-1ubuntu4.25) ...
+    webO1: Setting up ssl-cert (1.0.39) ...
+    webO1: Setting up libaprutil1:amd64 (1.6.1-2) ...
+    webO1: Setting up liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+    webO1: Setting up libaprutil1-ldap:amd64 (1.6.1-2) ...
+    webO1: Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+    webO1: Setting up apache2-utils (2.4.29-1ubuntu4.25) ...
+    webO1: Setting up apache2-bin (2.4.29-1ubuntu4.25) ...
+    webO1: Setting up apache2 (2.4.29-1ubuntu4.25) ...
+    webO1: Enabling module mpm_event.
+    webO1: Enabling module authz_core.
+    webO1: Enabling module authz_host.
+    webO1: Enabling module authn_core.
+    webO1: Enabling module auth_basic.
+    webO1: Enabling module access_compat.
+    webO1: Enabling module authn_file.
+    webO1: Enabling module authz_user.
+    webO1: Enabling module alias.
+    webO1: Enabling module dir.
+    webO1: Enabling module autoindex.
+    webO1: Enabling module env.
+    webO1: Enabling module mime.
+    webO1: Enabling module negotiation.
+    webO1: Enabling module setenvif.
+    webO1: Enabling module filter.
+    webO1: Enabling module deflate.
+    webO1: Enabling module status.
+    webO1: Enabling module reqtimeout.
+    webO1: Enabling conf charset.
+    webO1: Enabling conf localized-error-pages.
+    webO1: Enabling conf other-vhosts-access-log.
+    webO1: Enabling conf security.
+    webO1: Enabling conf serve-cgi-bin.
+    webO1: Enabling site 000-default.
+    webO1: Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+    webO1: Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+    webO1: Processing triggers for ureadahead (0.100.0-21) ...
+    webO1: Processing triggers for libc-bin (2.27-3ubuntu1.6) ...
+    webO1: Processing triggers for systemd (237-3ubuntu10.56) ...
+    webO1: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+    webO1: Processing triggers for ufw (0.36-0ubuntu0.18.04.2) ...
+    webO1: Processing triggers for mime-support (3.60ubuntu1) ...
+    webO1: Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+    webO1: Executing: /lib/systemd/systemd-sysv-install enable apache2
+    webO1: --2022-11-28 23:21:32--  https://www.tooplate.com/zip-templates/2108_dashboard.zip
+    webO1: Resolving www.tooplate.com (www.tooplate.com)... 69.16.201.107
+    webO1: Connecting to www.tooplate.com (www.tooplate.com)|69.16.201.107|:443... connected.
+    webO1: HTTP request sent, awaiting response... 200 OK
+    webO1: Length: 2515546 (2.4M) [application/zip]
+    webO1: Saving to: ‘2108_dashboard.zip’
+    webO1: 
+    webO1:      0K .......... .......... .......... .......... ..........  2% 70.7K 34s
+    webO1:     50K .......... .......... .......... .......... ..........  4%  150K 25s
+    webO1:    100K .......... .......... .......... .......... ..........  6%  148K 21s
+    webO1:    150K .......... .......... .......... .......... ..........  8%  163K 19s
+    webO1:    200K .......... .......... .......... .......... .......... 10%  158K 18s
+    webO1:    250K .......... .......... .......... .......... .......... 12%  232K 16s
+    webO1:    300K .......... .......... .......... .......... .......... 14%  225K 15s
+    webO1:    350K .......... .......... .......... .......... .......... 16%  211K 14s
+    webO1:    400K .......... .......... .......... .......... .......... 18%  225K 13s
+    webO1:    450K .......... .......... .......... .......... .......... 20%  228K 12s
+    webO1:    500K .......... .......... .......... .......... .......... 22%  267K 11s
+    webO1:    550K .......... .......... .......... .......... .......... 24%  260K 11s
+    webO1:    600K .......... .......... .......... .......... .......... 26%  257K 10s
+    webO1:    650K .......... .......... .......... .......... .......... 28%  328K 10s
+    webO1:    700K .......... .......... .......... .......... .......... 30%  298K 9s
+    webO1:    750K .......... .......... .......... .......... .......... 32%  325K 9s
+    webO1:    800K .......... .......... .......... .......... .......... 34%  360K 8s
+    webO1:    850K .......... .......... .......... .......... .......... 36%  293K 8s
+    webO1:    900K .......... .......... .......... .......... .......... 38%  338K 7s
+    webO1:    950K .......... .......... .......... .......... .......... 40%  286K 7s
+    webO1:   1000K .......... .......... .......... .......... .......... 42%  230K 7s
+    webO1:   1050K .......... .......... .......... .......... .......... 44%  452K 6s
+    webO1:   1100K .......... .......... .......... .......... .......... 46%  362K 6s
+    webO1:   1150K .......... .......... .......... .......... .......... 48%  452K 6s
+    webO1:   1200K .......... .......... .......... .......... .......... 50%  406K 5s
+    webO1:   1250K .......... .......... .......... .......... .......... 52%  266K 5s
+    webO1:   1300K .......... .......... .......... .......... .......... 54%  485K 5s
+    webO1:   1350K .......... .......... .......... .......... .......... 56%  419K 4s
+    webO1:   1400K .......... .......... .......... .......... .......... 59%  479K 4s
+    webO1:   1450K .......... .......... .......... .......... .......... 61%  406K 4s
+    webO1:   1500K .......... .......... .......... .......... .......... 63%  495K 4s
+    webO1:   1550K .......... .......... .......... .......... .......... 65%  440K 3s
+    webO1:   1600K .......... .......... .......... .......... .......... 67%  478K 3s
+    webO1:   1650K .......... .......... .......... .......... .......... 69%  611K 3s
+    webO1:   1700K .......... .......... .......... .......... .......... 71%  334K 3s
+    webO1:   1750K .......... .......... .......... .......... .......... 73% 1.30M 2s
+    webO1:   1800K .......... .......... .......... .......... .......... 75%  618K 2s
+    webO1:   1850K .......... .......... .......... .......... .......... 77%  423K 2s
+    webO1:   1900K .......... .......... .......... .......... .......... 79%  559K 2s
+    webO1:   1950K .......... .......... .......... .......... .......... 81%  989K 2s
+    webO1:   2000K .......... .......... .......... .......... .......... 83%  568K 1s
+    webO1:   2050K .......... .......... .......... .......... .......... 85%  559K 1s
+    webO1:   2100K .......... .......... .......... .......... .......... 87% 1.53M 1s
+    webO1:   2150K .......... .......... .......... .......... .......... 89%  479K 1s
+    webO1:   2200K .......... .......... .......... .......... .......... 91%  830K 1s
+    webO1:   2250K .......... .......... .......... .......... .......... 93%  701K 1s
+    webO1:   2300K .......... .......... .......... .......... .......... 95%  443K 0s
+    webO1:   2350K .......... .......... .......... .......... .......... 97% 9.59M 0s
+    webO1:   2400K .......... .......... .......... .......... .......... 99%  515K 0s
+    webO1:   2450K ......                                                100%  223M=7.7s
+    webO1: 
+    webO1: 2022-11-28 23:21:41 (318 KB/s) - ‘2108_dashboard.zip’ saved [2515546/2515546]
+    webO1: 
+    webO1: unzip:  cannot find or open i-o, i-o.zip or i-o.ZIP.
+    webO1: cp: cannot stat '2108_dashboard.zip/*': Not a directory
+==> dbO1: Importing base box 'geerlingguy/centos7'...
+==> dbO1: Matching MAC address for NAT networking...
+==> dbO1: Checking if box 'geerlingguy/centos7' version '1.2.26' is up to date...
+==> dbO1: Setting the name of the VM: MultiVM_dbO1_1669677725208_84339
+==> dbO1: Fixed port collision for 22 => 2222. Now on port 2201.
+==> dbO1: Clearing any previously set network interfaces...
+==> dbO1: Preparing network interfaces based on configuration...
+    dbO1: Adapter 1: nat
+    dbO1: Adapter 2: hostonly
+==> dbO1: Forwarding ports...
+    dbO1: 22 (guest) => 2201 (host) (adapter 1)
+==> dbO1: Running 'pre-boot' VM customizations...
+==> dbO1: Booting VM...
+==> dbO1: Waiting for machine to boot. This may take a few minutes...
+    dbO1: SSH address: 127.0.0.1:2201
+    dbO1: SSH username: vagrant
+    dbO1: SSH auth method: private key
+    dbO1: 
+    dbO1: Vagrant insecure key detected. Vagrant will automatically replace
+    dbO1: this with a newly generated keypair for better security.
+    dbO1: 
+    dbO1: Inserting generated public key within guest...
+    dbO1: Removing insecure key from the guest if it's present...
+    dbO1: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> dbO1: Machine booted and ready!
+==> dbO1: Checking for guest additions in VM...
+    dbO1: The guest additions on this VM do not match the installed version of
+    dbO1: VirtualBox! In most cases this is fine, but in rare cases it can
+    dbO1: prevent things such as shared folders from working properly. If you see
+    dbO1: shared folder errors, please make sure the guest additions within the
+    dbO1: virtual machine match the version of VirtualBox you have installed on
+    dbO1: your host and reload your VM.
+    dbO1: 
+    dbO1: Guest Additions Version: 6.1.32
+    dbO1: VirtualBox Version: 7.0
+==> dbO1: Configuring and enabling network interfaces...
+==> dbO1: Mounting shared folders...
+    dbO1: /vagrant => /home/brice/Documents/DevOps-training/MultiVM
+==> dbO1: Running provisioner: shell...
+    dbO1: Running: inline script
+    dbO1: Loaded plugins: fastestmirror
+    dbO1: Determining fastest mirrors
+    dbO1:  * base: centos.mirror.ndchost.com
+    dbO1:  * epel: mirrors.syringanetworks.net
+    dbO1:  * extras: mirror.arizona.edu
+    dbO1:  * updates: la.mirrors.clouvider.net
+    dbO1: Resolving Dependencies
+    dbO1: --> Running transaction check
+    dbO1: ---> Package mariadb-server.x86_64 1:5.5.68-1.el7 will be installed
+    dbO1: --> Processing Dependency: mariadb(x86-64) = 1:5.5.68-1.el7 for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    dbO1: --> Processing Dependency: perl-DBI for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    dbO1: --> Processing Dependency: perl-DBD-MySQL for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    dbO1: --> Processing Dependency: perl(Data::Dumper) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    dbO1: --> Processing Dependency: perl(DBI) for package: 1:mariadb-server-5.5.68-1.el7.x86_64
+    dbO1: --> Running transaction check
+    dbO1: ---> Package mariadb.x86_64 1:5.5.68-1.el7 will be installed
+    dbO1: ---> Package perl-DBD-MySQL.x86_64 0:4.023-6.el7 will be installed
+    dbO1: ---> Package perl-DBI.x86_64 0:1.627-4.el7 will be installed
+    dbO1: --> Processing Dependency: perl(RPC::PlServer) >= 0.2001 for package: perl-DBI-1.627-4.el7.x86_64
+    dbO1: --> Processing Dependency: perl(RPC::PlClient) >= 0.2000 for package: perl-DBI-1.627-4.el7.x86_64
+    dbO1: ---> Package perl-Data-Dumper.x86_64 0:2.145-3.el7 will be installed
+    dbO1: --> Running transaction check
+    dbO1: ---> Package perl-PlRPC.noarch 0:0.2020-14.el7 will be installed
+    dbO1: --> Processing Dependency: perl(Net::Daemon) >= 0.13 for package: perl-PlRPC-0.2020-14.el7.noarch
+    dbO1: --> Processing Dependency: perl(Net::Daemon::Test) for package: perl-PlRPC-0.2020-14.el7.noarch
+    dbO1: --> Processing Dependency: perl(Net::Daemon::Log) for package: perl-PlRPC-0.2020-14.el7.noarch
+    dbO1: --> Processing Dependency: perl(Compress::Zlib) for package: perl-PlRPC-0.2020-14.el7.noarch
+    dbO1: --> Running transaction check
+    dbO1: ---> Package perl-IO-Compress.noarch 0:2.061-2.el7 will be installed
+    dbO1: --> Processing Dependency: perl(Compress::Raw::Zlib) >= 2.061 for package: perl-IO-Compress-2.061-2.el7.noarch
+    dbO1: --> Processing Dependency: perl(Compress::Raw::Bzip2) >= 2.061 for package: perl-IO-Compress-2.061-2.el7.noarch
+    dbO1: ---> Package perl-Net-Daemon.noarch 0:0.48-5.el7 will be installed
+    dbO1: --> Running transaction check
+    dbO1: ---> Package perl-Compress-Raw-Bzip2.x86_64 0:2.061-3.el7 will be installed
+    dbO1: ---> Package perl-Compress-Raw-Zlib.x86_64 1:2.061-4.el7 will be installed
+    dbO1: --> Finished Dependency Resolution
+    dbO1: 
+    dbO1: Dependencies Resolved
+    dbO1: 
+    dbO1: ================================================================================
+    dbO1:  Package                      Arch        Version               Repository
+    dbO1:                                                                            Size
+    dbO1: ================================================================================
+    dbO1: Installing:
+    dbO1:  mariadb-server               x86_64      1:5.5.68-1.el7        base       11 M
+    dbO1: Installing for dependencies:
+    dbO1:  mariadb                      x86_64      1:5.5.68-1.el7        base      8.8 M
+    dbO1:  perl-Compress-Raw-Bzip2      x86_64      2.061-3.el7           base       32 k
+    dbO1:  perl-Compress-Raw-Zlib       x86_64      1:2.061-4.el7         base       57 k
+    dbO1:  perl-DBD-MySQL               x86_64      4.023-6.el7           base      140 k
+    dbO1:  perl-DBI                     x86_64      1.627-4.el7           base      802 k
+    dbO1:  perl-Data-Dumper             x86_64      2.145-3.el7           base       47 k
+    dbO1:  perl-IO-Compress             noarch      2.061-2.el7           base      260 k
+    dbO1:  perl-Net-Daemon              noarch      0.48-5.el7            base       51 k
+    dbO1:  perl-PlRPC                   noarch      0.2020-14.el7         base       36 k
+    dbO1: 
+    dbO1: Transaction Summary
+    dbO1: ================================================================================
+    dbO1: Install  1 Package (+9 Dependent packages)
+    dbO1: 
+    dbO1: Total download size: 21 M
+    dbO1: Installed size: 110 M
+    dbO1: Downloading packages:
+    dbO1: --------------------------------------------------------------------------------
+    dbO1: Total                                              846 kB/s |  21 MB  00:25
+    dbO1: Running transaction check
+    dbO1: Running transaction test
+    dbO1: Transaction test succeeded
+    dbO1: Running transaction
+    dbO1:   Installing : perl-Data-Dumper-2.145-3.el7.x86_64                         1/10
+    dbO1:   Installing : 1:perl-Compress-Raw-Zlib-2.061-4.el7.x86_64                 2/10
+    dbO1:   Installing : 1:mariadb-5.5.68-1.el7.x86_64                               3/10
+    dbO1:   Installing : perl-Net-Daemon-0.48-5.el7.noarch                           4/10
+    dbO1:   Installing : perl-Compress-Raw-Bzip2-2.061-3.el7.x86_64                  5/10
+    dbO1:   Installing : perl-IO-Compress-2.061-2.el7.noarch                         6/10
+    dbO1:   Installing : perl-PlRPC-0.2020-14.el7.noarch                             7/10
+    dbO1:   Installing : perl-DBI-1.627-4.el7.x86_64                                 8/10
+    dbO1:   Installing : perl-DBD-MySQL-4.023-6.el7.x86_64                           9/10
+    dbO1:   Installing : 1:mariadb-server-5.5.68-1.el7.x86_64                       10/10
+    dbO1:   Verifying  : perl-Compress-Raw-Bzip2-2.061-3.el7.x86_64                  1/10
+    dbO1:   Verifying  : perl-Net-Daemon-0.48-5.el7.noarch                           2/10
+    dbO1:   Verifying  : perl-Data-Dumper-2.145-3.el7.x86_64                         3/10
+    dbO1:   Verifying  : 1:mariadb-server-5.5.68-1.el7.x86_64                        4/10
+    dbO1:   Verifying  : perl-DBD-MySQL-4.023-6.el7.x86_64                           5/10
+    dbO1:   Verifying  : 1:mariadb-5.5.68-1.el7.x86_64                               6/10
+    dbO1:   Verifying  : 1:perl-Compress-Raw-Zlib-2.061-4.el7.x86_64                 7/10
+    dbO1:   Verifying  : perl-DBI-1.627-4.el7.x86_64                                 8/10
+    dbO1:   Verifying  : perl-IO-Compress-2.061-2.el7.noarch                         9/10
+    dbO1:   Verifying  : perl-PlRPC-0.2020-14.el7.noarch                            10/10
+    dbO1: 
+    dbO1: Installed:
+    dbO1:   mariadb-server.x86_64 1:5.5.68-1.el7
+    dbO1: 
+    dbO1: Dependency Installed:
+    dbO1:   mariadb.x86_64 1:5.5.68-1.el7
+    dbO1:   perl-Compress-Raw-Bzip2.x86_64 0:2.061-3.el7
+    dbO1:   perl-Compress-Raw-Zlib.x86_64 1:2.061-4.el7
+    dbO1:   perl-DBD-MySQL.x86_64 0:4.023-6.el7
+    dbO1:   perl-DBI.x86_64 0:1.627-4.el7
+    dbO1:   perl-Data-Dumper.x86_64 0:2.145-3.el7
+    dbO1:   perl-IO-Compress.noarch 0:2.061-2.el7
+    dbO1:   perl-Net-Daemon.noarch 0:0.48-5.el7
+    dbO1:   perl-PlRPC.noarch 0:0.2020-14.el7
+    dbO1: 
+    dbO1: Complete!
+    dbO1: Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to /usr/lib/systemd/system/mariadb.service.
+[brice@DESKTOP-VOL9M2F MultiVM]$ 
