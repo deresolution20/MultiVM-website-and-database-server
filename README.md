@@ -11,7 +11,7 @@ Project consists of a utilizing Vagrant to provision to automate the setup of tw
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>Bash/b> 
+- <b>Bash</b> 
 - <b>Oracle VM Virtualbox 7.0 </b>
 - <b>Vagrant boxes</b>
 - <b>https://app.vagrantup.com/boxes/search</b>
